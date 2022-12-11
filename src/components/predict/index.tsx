@@ -22,6 +22,14 @@ const PredictSection = styled.section`
     }
   }
   .contentBox {
+    margin: 50px auto;
+    width: 417px;
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
   }
   .back {
     width: 200px;
@@ -63,7 +71,9 @@ const History = () => {
       </div>
       <div className="contentBox">
         {historyList.map((item: any, index: number) => (
-          <></>
+          <div className="content">
+            {item.dt_txt} - {item.weather[0].description}
+          </div>
         ))}
       </div>
       <Link to="/" style={{ textDecoration: "none" }}>
