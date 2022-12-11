@@ -122,7 +122,7 @@ const Main = () => {
   const getCurr = async () => {
     try {
       const res = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=50d1c2c8ee17f4a988ca51eece0ea637`
+        `https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=${process.env.REACT_APP_OPEN_WEATHER}`
       );
       setCurr(res.data.weather[0].description);
     } catch (e) {
